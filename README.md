@@ -59,3 +59,23 @@ const tarifPerJam = parseFloat(prompt("Masukkan tarif per jam:"));
 main();
 
 === Test no 3 ===
+
+1.  UPDATE mahasiswa
+    SET alamat = 'Jl. Raya No.5'
+    WHERE NIM = '123456';
+
+2.  SELECT m.NIM, m.Nama, m.Jurusan, d.Nama AS Dosen_Pengajar
+    FROM mahasiswa m
+    JOIN mata_kuliah mk ON m.NIM = mk.NIM
+    JOIN dosen d ON mk.Dosen_Pengajar = d.ID
+    WHERE m.Jurusan = 'TeknikInformatika';
+
+3.  SELECT Nama
+    FROM mahasiswa
+    ORDER BY Umur DESC
+    LIMIT 5;
+
+4.  SELECT m.Nama, mk.Mata_Kuliah, mk.Nilai
+    FROM mahasiswa m
+    JOIN mata_kuliah mk ON m.NIM = mk.NIM
+    WHERE mk.Nilai > 70;
